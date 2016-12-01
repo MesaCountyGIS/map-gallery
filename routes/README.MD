@@ -1,0 +1,1 @@
+The one route used for this app (/gallery) is handled in app.js

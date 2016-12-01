@@ -1,0 +1,152 @@
+doctype html(lang='en')
+head
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1')
+
+    meta(name='apple-mobile-web-app-capable', content='yes')
+
+    meta(name='apple-mobile-web-app-status-bar-style', content='translucent-black')
+
+    title Mesa County Map Gallery
+
+    link(rel='stylesheet', href='stylesheets/indexStyle.css')
+
+    link(rel='stylesheet', href='stylesheets/default-skin.css')
+
+    link(rel='stylesheet', href='stylesheets/photoswipe.css')
+
+  body
+    include includes/header.jade
+
+    #myWrapper
+      //- span(style='position:absolute;margin:0 auto;') Map Gallery
+
+      include includes/left_sidebar.jade
+      // <div id="linkmaps" style="width:50em;height:20em;border:1px solid black;float:right;"></div>
+      .my-simple-gallery(itemscope='', itemtype='http://schema.org/ImageGallery' title='Click on a thumbnail to preview, print or download each image')
+        figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+          a(href='http://emap.mesacounty.us/staticmaps/jpg/Atlas Book 2015.jpg', itemprop='url', data-size='1275x1650', data-formats='pdf')
+            img(src='http://emap.mesacounty.us/staticmaps/jpg/Atlas Cover 2015_thumb.jpg', itemprop='thumbnail', alt='2015 Mesa County Atlas')
+
+          span.title 2015 Mesa County Atlas
+
+        figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+          a(href='http://emap.mesacounty.us/staticmaps/jpg/Mesa County Map 2015.jpg', itemprop='contentUrl', data-size='8235x5112', data-formats='pdf,jpg')
+            img(src='http://emap.mesacounty.us/staticmaps/jpg/Mesa County Map 2015_thumb.jpg', itemprop='thumbnail', alt='2015 Mesa County Map')
+
+          span.title 2015 Mesa County Wall Map
+
+          figcaption(itemprop='caption description') 2015 Mesa County Wall Map
+
+        figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+          a(href='http://emap.mesacounty.us/staticmaps/jpg/Grand Valley Paved Paths.jpg', itemprop='contentUrl', data-size='1650x1275', data-formats='pdf, jpg')
+            img(style='border: 1px solid black', src='http://emap.mesacounty.us/staticmaps/jpg/Grand Valley Paved Paths_thumb.jpg', itemprop='thumbnail', alt='Grand Valley Paved Paths')
+
+          span.title Grand Valley Paved Paths
+
+          figcaption(itemprop='caption description') Grand Valley Paved Paths
+
+        figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+          a(href='http://emap.mesacounty.us/staticmaps/jpg/Map of State of Colorado.jpg', itemprop='contentUrl', data-size='1024x683', data-formats='pdf,jpg')
+            img(src='http://emap.mesacounty.us/staticmaps/jpg/Map of State of Colorado_thumb.jpg', itemprop='thumbnail', alt='State of Colorado')
+
+          span.title State of Colorado
+
+          figcaption(itemprop='caption description') State of Colorado Map
+
+        figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+          a(href='http://emap.mesacounty.us/staticmaps/jpg/GVT Map 2015.jpg', itemprop='contentUrl', data-size='2500x1836', data-formats='pdf')
+            img(src='http://emap.mesacounty.us/staticmaps/jpg/GVT Map 2015_thumb.jpg', itemprop='thumbnail', alt='2015 GVT Transit Map')
+
+          span.title 2015 GVT Transit Map
+
+          figcaption(itemprop='caption description') 2015 GVT Transit Map
+
+        figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+          a(href='http://emap.mesacounty.us/staticmaps/jpg/bigCounty.jpg', itemprop='contentUrl', data-size='1710x1140', data-formats='jpg,pdf')
+            img(src='http://emap.mesacounty.us/staticmaps/jpg/bigCounty_thumb.jpg', itemprop='thumbnail', alt='How Big is Mesa County?')
+
+          span.title How Big is Mesa County?
+
+          figcaption(itemprop='caption description') How Big is Mesa County?
+
+        figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+          a(href='http://emap.mesacounty.us/staticmaps/jpg/population_Distribution.jpg', itemprop='contentUrl', data-size='1690x975', data-formats='jpg,pdf')
+            img(style='border: 1px solid black', src='http://emap.mesacounty.us/staticmaps/jpg/population_Distribution_thumb.jpg', itemprop='thumbnail', alt='Mesa County Population Distribution')
+
+          span.title Mesa County Population Distribution
+
+          figcaption(itemprop='caption description') Mesa County Population Distribution
+
+        figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+          a(href='http://emap.mesacounty.us/staticmaps/jpg/persigo.jpg', itemprop='contentUrl', data-size='8798x6800', data-formats='jpg,pdf')
+            img(src='http://emap.mesacounty.us/staticmaps/jpg/persigo_thumb.jpg', itemprop='thumbnail', alt='Persigo 201 Boundary')
+
+          span.title Persigo 201 Boundary
+
+          figcaption(itemprop='caption description') Persigo 201 Boundary
+
+        figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+          a(href='http://emap.mesacounty.us/staticmaps/jpg/Commissioner District Map.jpg', itemprop='contentUrl', data-size='1018x774', data-formats='jpg,pdf')
+            img(src='http://emap.mesacounty.us/staticmaps/jpg/Commissioner_District_Thumb.jpg', itemprop='thumbnail', alt='Commissioner District Map')
+
+          span.title Commissioner District Map
+
+          figcaption(itemprop='caption description') Commissioner District Map
+
+      // Root element of PhotoSwipe. Must have class pswp.
+      .pswp(tabindex='-1', role='dialog', aria-hidden='true')
+        //
+          Background of PhotoSwipe.
+          It's a separate element, as animating opacity is faster than rgba().
+        .pswp__bg
+        // Slides wrapper with overflow:hidden.
+        .pswp__scroll-wrap
+          // Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory.
+          // don't modify these 3 pswp__item elements, data is added later on.
+          .pswp__container
+            .pswp__item
+
+            .pswp__item
+
+            .pswp__item
+          // Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed.
+          .pswp__ui.pswp__ui--hidden
+            .pswp__top-bar
+              // Controls are self-explanatory. Order can be changed.
+              .pswp__counter
+
+              button.pswp__button.pswp__button--close(title='Close (Esc)')
+
+              button.pswp__button.pswp__button--share(title='Share')
+
+              button.pswp__button.pswp__button--fs(title='Toggle fullscreen')
+
+              button.pswp__button.pswp__button--zoom(title='Zoom in/out')
+              // Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR
+              // element will get class pswp__preloader--active when preloader is running
+              .pswp__preloader
+                .pswp__preloader__icn
+                  .pswp__preloader__cut
+                    .pswp__preloader__donut
+
+            .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+              .pswp__share-tooltip
+
+            button.pswp__button.pswp__button--arrow--left(title='Previous (arrow left)')
+
+            button.pswp__button.pswp__button--arrow--right(title='Next (arrow right)')
+
+            .pswp__caption
+              .pswp__caption__center
+
+    //- include includes/footer.jade
+
+    script(src='javascripts/photoswipe-ui-default.js')
+
+    script(src='javascripts/photoswipe.min.js')
+
+    script(src='javascripts/indexScript.js')
